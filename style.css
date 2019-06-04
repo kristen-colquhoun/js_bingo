@@ -1,0 +1,217 @@
+body {
+	background-color: #f0f0f0;
+}
+
+.container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 420px 300px 420px;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"info options numbers"
+		"card options numbers";
+	align-content: space-evenly;
+}
+
+
+button {
+	background-color: #64ad32;
+	border: 2px solid #ccc;
+	color: white;
+	padding: 20px 24px;
+}
+
+button:hover {
+	background-color: #00aacc;
+	color: #ffffff;
+}
+
+button:disabled,
+button[disabled] {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+}
+
+/*
+ * Info Card
+ */
+.info-card {
+	grid-area: info;
+}
+
+.info-card {
+	padding: 22px;
+	border: 1px solid rgb(39, 122, 143);
+	border-left-width: 7px;
+	border-left-color: rgb(39, 122, 143);
+	border-radius: 5px;
+	margin: 12px;
+}
+
+.info-card h3 {
+	margin-top: 0;
+	margin-bottom: 1px;
+	color: rgb(39, 122, 143);
+}
+
+/*
+ * Bingo Card
+ */
+.container .bingo-card {
+	grid-area: card;
+}
+
+.bingo-card {
+	border: 1px solid rgb(39, 122, 143);
+	border-radius: 5px;
+	margin: 0 25px;
+	width: 400px;
+	height: 400px;
+	text-align: center;
+}
+
+.bingo-card td,
+.bingo-card th {
+	border: 1px solid rgb(39, 122, 143);
+	padding: 20px;
+}
+
+.bingo-card td {
+	font-size: 1.5em;
+}
+
+.not-there {
+	background-color: rgb(216, 126, 53);
+	color: rgb(231, 231, 231);
+}
+
+.there {
+	background-color: rgb(50, 167, 56);
+	color: rgb(231, 231, 231);
+}
+
+.bingo-card thead {
+	background: rgb(39, 122, 143);
+}
+
+.bingo-card thead th {
+	font-weight: bold;
+	color: #F0F0F0;
+}
+
+/*
+ * Playing Options
+ */
+.playing-options {
+	grid-area: options;
+	text-align: center;
+}
+
+.current-game {
+	padding: 18px;
+	border: 1px solid rgb(50, 167, 56);
+	border-left-width: 7px;
+	border-left-color: rgb(50, 167, 56);
+	border-radius: 5px;
+	margin: 12px;
+}
+
+.current-game h2 {
+	margin-top: 0;
+	margin-bottom: 1px;
+	color: rgb(50, 167, 56);
+}
+
+#last-called-number {
+	font-size: 2em;
+	margin: 15px auto;
+	width: 100px;
+	line-height: 60px;
+	background: rgb(128, 58, 58);
+	color: rgb(231, 231, 231);
+	font-weight: bold;
+}
+
+/* --------- GAME OVER ----------*/
+#game-over {
+	padding: 18px;
+	border: 1px solid rgb(143, 52, 52);
+	border-left-width: 7px;
+	border-left-color: rgb(143, 52, 52);
+	border-radius: 5px;
+	margin: 12px;
+	color: rgb(143, 52, 52);
+}
+
+.new-game-btn {
+	background-color: rgb(143, 52, 52);
+	border: 2px solid #ccc;
+}
+
+.new-game-btn:hover {
+	background-color: rgb(50, 167, 56);
+	border: 2px solid #ccc;
+}
+
+#game-over {
+	display: none;
+}
+
+
+/* ---------- GAME WON ------------*/
+#game-won {
+	padding: 18px;
+	border: 1px solid rgb(52, 143, 79);
+	border-left-width: 7px;
+	border-left-color: rgb(52, 143, 79);
+	border-radius: 5px;
+	margin: 12px;
+	color: rgb(52, 143, 79);
+}
+
+.new-game-btn {
+	background-color: rgb(50, 167, 56);
+}
+
+.new-game-btn:hover {
+	background-color: rgb(136, 167, 50);
+}
+
+#game-won {
+	display: none;
+}
+.flashA {
+	background-color: rgb(0, 255, 55);
+}
+
+.flashB {
+	background-color: rgb(86, 183, 248);
+}
+
+
+/*
+ * Numbers board
+ */
+
+
+section.board-of-numbers {
+	grid-area: numbers;
+}
+
+#numbers-board {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+[id*="callable-"] {
+	text-align: center;
+	padding: 12px;
+	border: 1px solid rgb(39, 122, 143);
+	font-size: 1.3em;
+}
+
+.called {
+	background-color: rgb(143, 63, 39);
+	color: rgb(231, 231, 231);
+}

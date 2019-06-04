@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>BINGOOO!!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <a href="sprint1/sprint1.html">Sprint 1</a> |
+    <a href="sprint2/sprint2.html">Sprint 2</a> |
+    <a href="sprint3/sprint3.html">Sprint 3</a> |
+    <a href="sprint4/sprint4.html">Sprint 4</a> |
+    <a href="sprint5/sprint5.html">Sprint 5</a> |
+    <a href="sprint6/sprint6.html">Sprint 6</a>
+
+    <div class="container">
+        <!-- Info Card -->
+        <div class="info-card">
+            <h3>Sprint 6</h3>
+            <p>Auto Bingo Caller / Card play integrating the Bingo Card & Bingo Caller into a single Application.</p>
+            <p>With auto caller done in sprint 2 this is already done, the appliation is now whole and when you have a
+                line the games stops you win</p>
+        </div>
+        <!-- The Bingo Card -->
+        <table class="bingo-card">
+            <thead id="bingoTableHead">
+                <tr>
+                    <th>B</th>
+                    <th>I</th>
+                    <th>N</th>
+                    <th>G</th>
+                    <th>O</th>
+                </tr>
+            </thead>
+            <tbody id="bingoTableBody">
+                <tr>
+                    <td onclick="bingo.dab(0)" id="cell-0"></td>
+                    <td onclick="bingo.dab(5)" id="cell-5"></td>
+                    <td onclick="bingo.dab(10)" id="cell-10"></td>
+                    <td onclick="bingo.dab(14)" id="cell-14"></td>
+                    <td onclick="bingo.dab(19)" id="cell-19"></td>
+                </tr>
+                <tr>
+                    <td onclick="bingo.dab(1)" id="cell-1"></td>
+                    <td onclick="bingo.dab(6)" id="cell-6"></td>
+                    <td onclick="bingo.dab(11)" id="cell-11"></td>
+                    <td onclick="bingo.dab(15)" id="cell-15"></td>
+                    <td onclick="bingo.dab(20)" id="cell-20"></td>
+                </tr>
+                <tr>
+                    <td onclick="bingo.dab(2)" id="cell-2"></td>
+                    <td onclick="bingo.dab(7)" id="cell-7"></td>
+                    <td class="there" id="free">Free</td>
+                    <td onclick="bingo.dab(16)" id="cell-16"></td>
+                    <td onclick="bingo.dab(21)" id="cell-21"></td>
+                </tr>
+                <tr>
+                    <td onclick="bingo.dab(3)" id="cell-3"></td>
+                    <td onclick="bingo.dab(8)" id="cell-8"></td>
+                    <td onclick="bingo.dab(12)" id="cell-12"></td>
+                    <td onclick="bingo.dab(17)" id="cell-17"></td>
+                    <td onclick="bingo.dab(22)" id="cell-22"></td>
+                </tr>
+                <tr>
+                    <td onclick="bingo.dab(4)" id="cell-4"></td>
+                    <td onclick="bingo.dab(9)" id="cell-9"></td>
+                    <td onclick="bingo.dab(13)" id="cell-13"></td>
+                    <td onclick="bingo.dab(18)" id="cell-18"></td>
+                    <td onclick="bingo.dab(23)" id="cell-23"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Player Interaction -->
+        <div class="playing-options">
+            <div id="options" class="current-game">
+                <h2>Game</h2>
+                <p id="last-called-number">0</p>
+                <button id="start-game-btn" onclick="bingo.start();">Start Game</button>
+            </div>
+            <div id="game-over">
+                <h2>Game Over</h2>
+                <button class="new-game-btn" onclick="location.reload();">New Game</button>
+            </div>
+            <div id="game-won">
+                <h2>Congratulations</h2>
+                <button class="new-game-btn" onclick="location.reload();">New Game</button>
+            </div>
+        </div>
+        <!-- Numbers Board -->
+        <section class="board-of-numbers">
+            <div id="numbers-board">
+                <div id="callable-1">1</div>
+                <div id="callable-2">2</div>
+                <div id="callable-3">3</div>
+                <div id="callable-4">4</div>
+                <div id="callable-5">5</div>
+                <div id="callable-6">6</div>
+                <div id="callable-7">7</div>
+                <div id="callable-8">8</div>
+                <div id="callable-9">9</div>
+                <div id="callable-10">10</div>
+                <div id="callable-11">11</div>
+                <div id="callable-12">12</div>
+                <div id="callable-13">13</div>
+                <div id="callable-14">14</div>
+                <div id="callable-15">15</div>
+                <div id="callable-16">16</div>
+                <div id="callable-17">17</div>
+                <div id="callable-18">18</div>
+                <div id="callable-19">19</div>
+                <div id="callable-20">20</div>
+                <div id="callable-21">21</div>
+                <div id="callable-22">22</div>
+                <div id="callable-23">23</div>
+                <div id="callable-24">24</div>
+                <div id="callable-25">25</div>
+                <div id="callable-26">26</div>
+                <div id="callable-27">27</div>
+                <div id="callable-28">28</div>
+                <div id="callable-29">29</div>
+                <div id="callable-30">30</div>
+                <div id="callable-31">31</div>
+                <div id="callable-32">32</div>
+                <div id="callable-33">33</div>
+                <div id="callable-34">34</div>
+                <div id="callable-35">35</div>
+                <div id="callable-36">36</div>
+                <div id="callable-37">37</div>
+                <div id="callable-38">38</div>
+                <div id="callable-39">39</div>
+                <div id="callable-40">40</div>
+                <div id="callable-41">41</div>
+                <div id="callable-42">42</div>
+                <div id="callable-43">43</div>
+                <div id="callable-44">44</div>
+                <div id="callable-45">45</div>
+                <div id="callable-46">46</div>
+                <div id="callable-47">47</div>
+                <div id="callable-48">48</div>
+                <div id="callable-49">49</div>
+                <div id="callable-50">50</div>
+                <div id="callable-51">51</div>
+                <div id="callable-52">52</div>
+                <div id="callable-53">53</div>
+                <div id="callable-54">54</div>
+                <div id="callable-55">55</div>
+                <div id="callable-56">56</div>
+                <div id="callable-57">57</div>
+                <div id="callable-58">58</div>
+                <div id="callable-59">59</div>
+                <div id="callable-60">60</div>
+                <div id="callable-61">61</div>
+                <div id="callable-62">62</div>
+                <div id="callable-63">63</div>
+                <div id="callable-64">64</div>
+                <div id="callable-65">65</div>
+                <div id="callable-66">66</div>
+                <div id="callable-67">67</div>
+                <div id="callable-68">68</div>
+                <div id="callable-69">69</div>
+                <div id="callable-70">70</div>
+                <div id="callable-71">71</div>
+                <div id="callable-72">72</div>
+                <div id="callable-73">73</div>
+                <div id="callable-74">74</div>
+                <div id="callable-75">75</div>
+            </div>
+        </section>
+
+    </div>
+    <script src="bingo.js"></script>
+</body>
+
+</html>
